@@ -5,10 +5,12 @@ const EventDetailPage = () => {
 
 	return (
 		<>
-			<h4>Events Details!</h4>
+			<h1>Events Details!</h1>
 			<p>{params.eventId}</p>
 			<p>
-				<Link to='..' relative='path'>
+				<Link
+					to='..'
+					relative='path'>
 					Back
 				</Link>
 			</p>

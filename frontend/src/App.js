@@ -2,35 +2,31 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import HomePage from './Pages/HomePage';
-import EventDetailPage from './Pages/EventDetailPage';
-import EventsPage from './Pages/EventsPage';
-import NewEventPage from './Pages/NewEventPage';
+import HomePage from './Pages/Home';
+import EventDetailPage from './Pages/EventDetail';
+import EventsPage from './Pages/Events.js';
+import NewEventPage from './Pages/NewEvent';
 import { RootLayout } from './Pages/Root';
-import EventsNavigation from './components/EventsNavigation';
+import EventsRootLayout from './Pages/EventsRoot';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <RootLayout />,
 		children: [
-			{ path: '', element: <HomePage /> },
+			{ index: true, element: <HomePage /> },
 			{
 				path: 'events',
-				element: <EventsPage />,
+				element: <EventsRootLayout />,
+				children: [
+					{ index: true, element: <EventsPage /> },
+					{ path: ':eventId', element: <EventDetailPage /> },
+					{ path: 'new', element: <NewEventPage /> },
+					{ path: ':eventId/edit', element: <EventDetailPage /> },
+				],
 			},
-			{
-				path: 'events/:eventId',
-				element: <EventDetailPage />,
-			},
-			{
-				path: 'events/new',
-				element: <NewEventPage />,
-			},
-			{ path: 'events/:eventId/edit', element: <EventDetailPage /> },
 		],
 	},
-	{ path: '/allevents', element: <EventsNavigation /> },
 ]);
 
 function App() {

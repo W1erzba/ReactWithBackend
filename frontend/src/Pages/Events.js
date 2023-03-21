@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import EventsNavigation from '../components/EventsNavigation';
 
 const DUMMY_EVENTS = [
 	{
@@ -18,12 +17,13 @@ const DUMMY_EVENTS = [
 const EventsPage = () => {
 	return (
 		<>
-			<h2>Events List</h2>
-			<EventsNavigation />
+			<h1>Events List</h1>
 			<ul>
 				{DUMMY_EVENTS.map((event) => (
 					<li key={event.id}>
-						<Link to={event.id} relative=''>
+						<Link
+							to={event.id}
+							relative=''>
 							{event.eventName}
 						</Link>
 					</li>
