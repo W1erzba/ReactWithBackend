@@ -7,6 +7,7 @@ import NewEventPage from './Pages/NewEvent';
 import { RootLayout } from './Pages/Root';
 import EventsRootLayout from './Pages/EventsRoot';
 import ErrorPage from './Pages/Error';
+import EditEventPage from './Pages/EditEvent';
 
 const router = createBrowserRouter([
 	{
@@ -26,11 +27,19 @@ const router = createBrowserRouter([
 					},
 					{
 						path: ':eventId',
-						element: <EventDetailPage />,
+						// Added a id: property here because i want to use useRouteLoaderData instead of useLoader. This is required when you need to get data from higherLevel loader in component where there is no loader.
+						id: 'event-detail',
 						loader: eventDetailLoader,
+						children: [
+							{
+								idnex: true,
+								element: <EventDetailPage />,
+							},
+							{ path: 'edit', element: <EditEventPage /> },
+						],
 					},
+
 					{ path: 'new', element: <NewEventPage /> },
-					{ path: ':eventId/edit', element: <EventDetailPage /> },
 				],
 			},
 		],
