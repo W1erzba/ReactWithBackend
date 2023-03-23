@@ -27,7 +27,6 @@ const router = createBrowserRouter([
 					},
 					{
 						path: ':eventId',
-						// Added a id: property here because i want to use useRouteLoaderData instead of useLoader. This is required when you need to get data from higherLevel loader in component where there is no loader.
 						id: 'event-detail',
 						loader: eventDetailLoader,
 						children: [

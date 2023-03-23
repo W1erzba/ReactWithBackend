@@ -1,14 +1,6 @@
-import { Link } from 'react-router-dom';
+import EventForm from '../components/EventForm';
 
 const NewEventPage = () => {
-	return (
-		<>
-			<h1>New Event </h1>
-			<Link to='..' relative='path'>
-				Back to Event List
-			</Link>
-		</>
-	);
+	return <EventForm />;
 };
-
 export default NewEventPage;
