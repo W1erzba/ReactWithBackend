@@ -1,11 +1,1 @@
-{
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
-}
+{"events":[{"title":"Studia z muzyki","image":"https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=400","date":"2023-03-31","description":"Hejhka","id":"1fc45c6c-0fb1-4d5b-bb4f-d64f20add9ab"},{"title":"Music Event","image":"https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=400","date":"2023-03-30","description":"Cool music event","id":"f57e910b-2b14-49f2-bea3-4fd2674463c5"},{"title":"Event","image":"https://www.pexels.com/photo/people-sitting-on-gang-chairs-2774556/","date":"2023-04-01","description":"Nice event","id":"fb8f08c3-7596-4b10-b63c-b86ca9f3274a"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}
